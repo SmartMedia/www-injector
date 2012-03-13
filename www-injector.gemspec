@@ -5,11 +5,11 @@ require "www-injector/version"
 Gem::Specification.new do |s|
   s.name        = "www-injector"
   s.version     = Www::Injector::VERSION
-  s.authors     = ["Štefan Ľupták"]
-  s.email       = ["eskimag@eskimag.sk"]
+  s.authors     = ["Stefan Luptak"]
+  s.email       = ["stefan.luptak@smartmedia.cz"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Rack middleware to force using www in URL.}
+  s.description = %q{Just insert it into your Gemfile and every request without www will be redirected with 301 (Moved Permanently) to a www version.}
 
   s.rubyforge_project = "www-injector"
 
