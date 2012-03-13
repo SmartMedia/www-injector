@@ -7,8 +7,8 @@ class WwwInjector
   end
   
   def call(env)
-    if env['HTTP_HOST'] !~ /^https?\:\/\/www\./i
-      Rails.logger.info "\n\n -- WWW-INJECTOR REDIRECTING FROM " + env['HTTP_HOST'] + " TO " + Rack::Request.new(env).url.sub(/^(https?\:\/\/)/i) {|s| $1 + 'www.'}
+    if env['HTTP_HOST'] !~ /^www\./i
+      Rails.logger.info "\n\n -- WWW-INJECTOR REDIRECTING FROM " + env['HTTP_HOST'] + " TO " + 'www.' + Rack::Request.new(env).url
     else
       Rails.logger.info "\n\n -- WWW-INJECTOR NOT REDIRECTING FROM " + env['HTTP_HOST']
     end
