@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Www::Injector::VERSION
   s.authors     = ["Stefan Luptak"]
   s.email       = ["stefan.luptak@smartmedia.cz"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/SmartMedia/www-injector"
   s.summary     = %q{Rack middleware to force using www in URL.}
   s.description = %q{Just insert it into your Gemfile and every request without www will be redirected with 301 (Moved Permanently) to a www version.}
 
