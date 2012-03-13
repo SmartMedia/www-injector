@@ -7,7 +7,7 @@ class WwwInjector
   end
   
   def call(env)
-    if env['HTTP_HOST'] !~ /^www\./i
+    if env['HTTP_HOST'] !~ /^www\./i and env['HTTP_HOST'] !~ /heroku/i
       [301, { 'Location' => Rack::Request.new(env).url.sub(/^(https?\:\/\/)/i) {|s| $1 + 'www.'} }, ['Redirecting with www...']]
     else
       @app.call(env)
