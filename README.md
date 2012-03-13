@@ -6,7 +6,8 @@ This Rack middleware forces using of www. Whenever application is called without
 
 ## Installation
 
-Insert this line into your `Gemfile` file
+Insert this line into your `Gemfile` file:
+
 ```ruby
 gem 'www-injector', :git => 'git://github.com/SmartMedia/www-injector.git'
 ```
